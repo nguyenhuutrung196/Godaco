@@ -2,10 +2,83 @@ mixin PugImg()
 	img(data-src="https://source.unsplash.com/random/?Cryptocurrency&1" alt="" class="object-cover w-full h-full lozad" x-img)
 
 mixin ProductItem()
-	.item.item-product
-		.box-img 
-			a(href="#" class="img-ratio pt-[calc(276/416*100%)] zoom-img")
+	a(class="product-item item" href="#")
+		.img-src(class="img-ratio pt-[calc(182/280*100%)]")
+			+PugImg()
+		.content 
+			.code PD-T75CSB
+			h3 Built in stove
+			.desc
+				p Gas volume: 0.491 (kg/h)
+				p Power: 6,874 (kW)
+				p SCHOTT glasses
+
+mixin NewsItem()
+	.news-item.item 
+		.img-src 
+			a(href="#" class="img-ratio pt-[calc(280/450*100%)] zoom-img")
 				+PugImg()
-		.box-content 
+		.content
+			time 12/22/2022
 			h3 
-				a Sausages
+				a(href="#") How to save gas when using a gas stove
+			p Gas stove is a very familiar appliance for families. In the midst of the current high gas price, ...
+		.content-btn 
+			a(href="#").btn.btn-1
+				span SEE MORE
+				<svg xmlns="http://www.w3.org/2000/svg" width="26" height="19" viewBox="0 0 26 19" fill="none">
+					<circle cx="17" cy="9.27344" r="8.5" stroke="white"/>
+					<path d="M19.7701 8.95459L15.2471 4.43155C15.0847 4.24182 14.7991 4.21971 14.6094 4.38222C14.4197 4.5447 14.3976 4.83023 14.5601 5.01996C14.5752 5.03764 14.5917 5.05416 14.6094 5.06928L18.359 8.8234H0.452289C0.202511 8.8234 0 9.02591 0 9.27573C0 9.52555 0.202511 9.72802 0.452289 9.72802H18.359L14.6094 13.4776C14.4197 13.6401 14.3976 13.9256 14.5601 14.1153C14.7226 14.3051 15.0081 14.3272 15.1978 14.1647C15.2155 14.1495 15.232 14.133 15.2471 14.1153L19.7702 9.59229C19.9455 9.41593 19.9455 9.13102 19.7701 8.95459Z" fill="white"/>
+				</svg>
+
+mixin CatalogItem()
+	.catalog-item.item
+		.img-src 
+			a(href="#" class="img-ratio pt-[calc(360/270*100%)]")
+				+PugImg()
+		.content(class="p-4")
+			h3
+				a(href="#") Negative gas stove PD-T75CSB – New value to improve life
+			.flex(class="items-center gap-2 mt-2")
+				a(href="#" class="flex items-center gap-2 hover:")
+					.icon
+						em.fa-light.fa-eye
+					span View details
+				a(href="#" class="flex items-center gap-2 hover:")
+					.icon
+						em.fa-sharp.fa-light.fa-download
+					span Download
+
+mixin SlideNews1(post, image, date, title)
+	.swiper-slide
+		a(href= post class="")
+			.news-slide-img
+				img(src= image, alt="")
+			.news-slide-date(class="flex py-5 items-center")
+				<i class="fa-regular fa-clock pr-1"></i>
+				p= date
+			.news-slide-title
+				h4= title
+
+mixin ListNews2(post, image, date, title)
+	.showListNews(class="hover:text-[#C4212B]")
+		a(href= post class="hover:text-[#C4212B]")
+			.news-slide-img
+				img(src= image, alt="")
+			.news-slide-date(class="flex py-5 items-center")
+				<i class="fa-regular fa-clock pr-1"></i>
+				p= date
+			.news-slide-title(class="")
+				h4= title
+
+mixin ListNewsDetailPostRight(link, image, date, title)
+	.showListPostNews(class="pb-4")
+		a(href= link) 
+			.post-list-detail(class="flex gap-4")
+				.post-image
+					img(src= image, alt="")
+				.post-list-title
+					.post-date(class="flex")
+						<i class="fa-regular fa-clock pr-3"></i>
+						span= date
+					p= title

@@ -1,34 +1,5 @@
-body
-	--menu: #08518F
-	--menu-active: #C4212B
-	--border: #CCCCCC
-	--background: white
-
-.homepage
-	--menu: #08518F
-	--menu-active: #C4212B
-	--border: #CCCCCC
-	--background: white
-	@screen xl
-		--menu: white
-		--border: white
-		--background: transparent
-		--menu-active: white
-	.header-logo
-		a
-			&.header-logo-desktop
-				@apply hidden
-			&.header-logo-mobile
-				@apply block
-			@screen xl
-				&.header-logo-desktop
-					@apply block
-				&.header-logo-mobile
-					@apply hidden
-	
 header
-	background-color: var(--background)
-	@apply flex items-center fixed top-0 left-0 w-full h-20 lg:h-25 z-1000
+	@apply flex items-center fixed top-0 left-0 bg-white xl:bg-transparent w-full h-20 lg:h-25 z-1000
 	&.active
 		@apply bg-white
 		box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.08)
@@ -46,6 +17,7 @@ header
 						&::before
 							@apply bg-red-500
 				&.has-child
+					@apply text-blue-500
 					em
 						@apply text-blue-500
 			a
@@ -79,6 +51,11 @@ header
 				@apply hidden
 			&.header-logo-mobile
 				@apply block
+			@screen xl
+				&.header-logo-desktop
+					@apply block
+				&.header-logo-mobile
+					@apply hidden
 
 	.header-hambuger
 		@apply flex-shrink-0 basis-[calc(40/1920*100rem)] max-w-[calc(40/1920*100rem)] w-full flex flex-col gap-1 mt-auto mb-auto xl:hidden
@@ -101,27 +78,22 @@ header
 		@apply flex items-center gap-16
 		&>li
 			@apply relative
-			&.active, &:hover
-				&>a
-					color: var(--menu-active)
+			&.active
+				a
 					&::before
-						background-color: var(--menu-active)
+						@apply bg-blue-500 xl:bg-white
 			&.has-child
 				em
-					color: var(--menu)
-					@apply text-xl pl-4
+					@apply text-xl text-inherit pl-4 text-blue-500 xl:text-white
 				&:hover
 					.drop-down
 						@apply opacity-100 visible
 		a
-			color: var(--menu)
-			@apply relative inline-flex whitespace-nowrap global-text-20 font-medium
-			@apply transition-all duration-300
+			@apply relative text-blue-500 xl:text-white inline-flex whitespace-nowrap global-text-20 font-medium
 			&::before
 				content: ''
 				top: calc( 100% + rr(6px))
-				@apply absolute left-0 bg-transparent w-full h-[calc(1/1920*100rem)]
-				@apply transition-all duration-300
+				@apply absolute left-0 bg-transparent w-full h-[1px]
 		.drop-down
 			@apply absolute left-0 top-full opacity-0 invisible
 			ul
@@ -156,29 +128,23 @@ header
 			@apply flex items-center
 			li
 				@apply relative pl-[calc(13.5/1920*100rem)] ml-[calc(13.5/1920*100rem)]
-				&.active, &:hover
+				&.active
 					a
-						color: var(--menu-active)
 						&::before
-							background-color: var(--menu-active)
+							@apply bg-white w-full
 				&::after
 					content: ''
-					background-color: var(--border)
-					@apply absolute left-0 top-1/2 -translate-y-1/2 w-[calc(2/1920*100rem)] h-5
+					@apply absolute left-0 top-1/2 -translate-y-1/2 bg-white w-[2px] h-[20px]
 				a
-					color: var(--menu)
-					@apply relative uppercase global-text-20
-					@apply transition-all duration-300
+					@apply relative text-white uppercase global-text-20
 					&::before
 						content: ''
 						top: calc( 100% + rr(6px))
-						@apply absolute left-0 bg-transparent w-full h-[calc(1/1920*100rem)]
-						@apply transition-all duration-300
+						@apply absolute left-0 bg-transparent w-full h-[1px]
 
 	.header-menu-search
 		em
-			color: var(--menu)
-			@apply text-xl cursor-pointer
+			@apply text-blue-500 xl:text-white text-xl cursor-pointer
 
 .header-menu-mobile
 	&.active

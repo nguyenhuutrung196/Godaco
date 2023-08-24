@@ -1,50 +1,59 @@
-footer(class="bg-[#e4edfb] relative")
-	.container
-		.footer-top(class="py-10 md:pt-20 relative z-10")
-			.logo-footer(class="text-center")
-				img(src="./img/logo_footer.png" alt="")
-		.line-svg
-			<svg xmlns="http://www.w3.org/2000/svg" width="1312" height="14" viewBox="0 0 1312 14" fill="none">
-				<path opacity="0.4" d="M2.09819e-06 13.0005C41.4141 13.0005 38.7636 1.00024 79.8465 1.00023C120.929 1.00022 121.261 13.0005 161.681 13.0004C202.101 13.0004 202.432 1.00021 244.84 1.0002C287.248 1.00019 285.923 13.0004 326.343 13.0004C366.764 13.0004 366.101 1.00018 407.515 1.00017C448.929 1.00017 450.586 13.0004 489.349 13.0004C528.113 13.0004 529.438 1.00015 570.853 1.00014C612.267 1.00014 613.592 13.0004 652.356 13.0004C691.119 13.0004 693.438 1.00012 732.533 1.00012C771.628 1.00011 774.941 13.0003 816.024 13.0003C857.107 13.0003 857.77 1.00009 898.19 1.00009C938.61 1.00008 941.261 13.0003 980.024 13.0003C1018.79 13.0003 1020.44 1.00007 1059.87 1.00006C1099.3 1.00005 1101.95 13.0003 1142.7 13.0003C1183.45 13.0003 1184.44 1.00004 1224.86 1.00003C1265.28 1.00002 1267.6 13.0003 1312 13.0002" stroke="#3974A5"/>
-			</svg>
-		.footer-bottom(class="py-10 md:pb-20")
-			.row
-				.col(class="md:w-1/2 lg:w-4/12")
-					h3 Contact Us
-					p.footer-mail
-						| Email: 
-						a(href="mailto: godaco@godaco.com.vn") godaco@godaco.com.vn
-					.btn-wrap(class="mt-8")
-						a(href="#" class="btn btn-2")
-							span Contact Us
-							em.fa-light.fa-arrow-right-long
-				.col(class="md:w-1/2 lg:w-4/12")
-					h3 Connect with Us
-					ul.footer-socials
+footer
+	.footer-top.section-large(class="border-b-3 border-primary-50")
+		.container-custom-1172
+			.wrapper
+				.box-left
+					h3 Links
+					nav(class="footer-menu flex gap-10")
+						ul
+							li 
+								a(href="#") Company profile 
+							li 
+								a(href="#") Products
+							li 
+								a(href="#") Catalog
+						ul
+							li 
+								a(href="#") Contact us
+							li 
+								a(href="#") Recruitment
+				.box-right
+					h3 Subscribe newsletter
+					.form-newsletter
+						form
+							input(type="text" placeholder="Email")
+							button
+								span SUBSCRIBE
+								<svg xmlns="http://www.w3.org/2000/svg" width="26" height="19" viewBox="0 0 26 19" fill="none">
+									<circle cx="17" cy="9.93896" r="8.5" stroke="white"/>
+									<path d="M19.7701 9.62012L15.2471 5.09707C15.0847 4.90735 14.7991 4.88523 14.6094 5.04775C14.4197 5.21022 14.3976 5.49576 14.5601 5.68548C14.5752 5.70317 14.5917 5.71969 14.6094 5.73481L18.359 9.48893H0.452289C0.202511 9.48893 0 9.69144 0 9.94126C0 10.1911 0.202511 10.3935 0.452289 10.3935H18.359L14.6094 14.1431C14.4197 14.3056 14.3976 14.5911 14.5601 14.7809C14.7226 14.9706 15.0081 14.9927 15.1978 14.8302C15.2155 14.815 15.232 14.7985 15.2471 14.7809L19.7702 10.2578C19.9455 10.0815 19.9455 9.79655 19.7701 9.62012Z" fill="white"/>
+								</svg>
+	.footer-bottom.section-medium
+		.container-custom-1172
+			.wrapper
+				.box-left
+					h3 PALOMA VIETNAM CO., LTD
+					ul 
+						li 
+							.icon
+								em.fa-light.fa-location-dot
+							p No. 114-116, Street No. 6, Vsip HP Industrial Park, Branch, and Service, Tan Duong Commune, Thuy Nguyen District, Hai Phong
+						li 
+							.icon
+								em.fa-light.fa-phone
+							p Hotline 1900 55 55 94 (8:00AM - 5:00PM Mon-Fri)
+				.box-right 
+					ul 
 						li 
 							a(href="#")
-								em.fa-brands.fa-facebook-f
+								<i class="fa-brands fa-facebook-f"></i>
 						li 
 							a(href="#")
-								em.fa-brands.fa-linkedin
+								<i class="fa-brands fa-youtube"></i>
 						li 
 							a(href="#")
-								em.fa-brands.fa-youtube
-					.btn-wrap(class="mt-3")
-						a(href="#" class="btn btn-3")
-							span Sign up for the newsletter
-							em.fa-light.fa-arrow-right-long
-				.col(class="md:w-1/2 lg:w-4/12")
-					ul.footer-links
-						li 
-							a(href="#") Privacy Policy
-						li 
-							a(href="#") Terms of use
-						li 
-							a(href="#") Sitemap
-					p.copy-right 
-						| ©2023 GODACO®. All rights reserved.
+								<i class="fa-brands fa-linkedin-in"></i>
+					p
+						| © 2022 PALOMA.
 						br
-						| Website designed by Canh Cam.
-					.logo-bct
-						img(src="./img/logo_bct.png", alt="logo-bo-cong-thuong")
+						| Web design by Canh Cam.

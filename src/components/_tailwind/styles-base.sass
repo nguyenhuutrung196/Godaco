@@ -43,9 +43,9 @@
 		&::-webkit-scrollbar
 			width: 0px
 	.row
-		@apply flex flex-wrap -mx-[calc(16/1920*100rem)]
+		@apply flex flex-wrap -mx-[calc(15/1920*100rem)]
 	.col
-		@apply px-[calc(16/1920*100rem)] w-full
+		@apply px-[calc(15/1920*100rem)] w-full
 	h1
 		@apply text-3xl font-bold
 
@@ -88,12 +88,8 @@
 			content: ''
 			@apply absolute top-0 left-0 w-full h-full bg-black bg-opacity-40 pointer-events-none z-10 whitespace-nowrap
 	main
-		@apply text-base pt-25
+		@apply text-base
+	.homepage
 		@media(max-width: 767.98px)
 			main
-				@apply pt-20
-	.homepage
-		main
-			@apply pt-0
-			@media(max-width: 767.98px)
-				@apply pt-20
+				@apply py-20

@@ -1,13 +1,12 @@
-section.home-banner(class="bg-secondary-2 relative")
+section.home-banner(class="bg-secondary-2")
 	.home-banner-swiper.relative 
 		.swiper
 			.swiper-wrapper
 				-for(i=0;i<3;i++)
 					.swiper-slide
 						.item
-							picture.img
-								source(media='(min-width: 768px)' srcset='./img/banner/home-banner.jpg')
-								img(src="./img/banner/banner-mobile.jpg" alt="home-banner")
+							.img
+								img(src="./img/banner/home-banner.jpg", alt="home-banner")
 							.box-content
 								div(class="px-15 xl:px-0")
 									p
@@ -15,5 +14,6 @@ section.home-banner(class="bg-secondary-2 relative")
 										span THE MEKONG RIVER
 										| to the world
 		.container
-			.wrap-navigation-slide.progressbar-style-1.relative
-				.swiper-pagination
+			.wrap-navigation-slide.relative
+				.progressbar-style-1
+					.swiper-pagination

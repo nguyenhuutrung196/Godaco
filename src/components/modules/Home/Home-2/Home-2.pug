@@ -1,55 +1,30 @@
 section.home-2
-	.container
-		.home-2-top
-			h2(class="font-secondary text-32 md:text-[calc(80/1920*100rem)] leading-none text-blue-500 font-normal text-center max-w-[calc(818/1920*100rem)] mx-auto") Bring the essence of the Mekong River to the world
-			p(class="global-text-20 text-black text-center max-w-[calc(1112/1920*100rem)] mx-auto mt-6") With over 20 years of experience, GODACO has emerged as a prominent force in the aquaculture industry. Our integrated approach encompasses cultivation, processing, and exportation, propelling us to the forefront of Vietnam's seafood sector. Each year, our export revenues surpass $100 million, solidifying our position as a trusted and successful player in the global market. 
-			div(class="mt-6 flex-center")
-				a(href="#" class="btn btn-1")
-					span About us
-					em.fa-light.fa-arrow-right-long
+	.container-custom-1500 
+		.home-2-top(setBackgroundDesktop="./img/home/2.jpg")
+			h2(class="title-global-1 mx-auto ") WHY US?
+			p(class="heading-regular-20 text-body-text-33 max-w-[calc(463/1920*100rem)] text-center mx-auto") PALOMA VIETNAM not only wants to bring to Vietnamese users international quality SAFETY - JAPANESE products, but FUEL SAVING brings economic benefits in the process of using the product.
 		.home-2-bottom
-			.grid-item
-				div(class="bg-blue-500 h-full px-5 py-7.5 rounded-[calc(8/1920*100rem)]")
-					.content
-						.icon 
-							em.fa-light.fa-user-helmet-safety
-							span 5000+
-						p Number of employees
-			.grid-item
-				.img-src(class="img-ratio pt-[calc(240/360*100%)] sm:pt-[26%] lg:pt-[calc(183/416*100%)]")
-					+PugImg()
-				.content
-					.icon 
-						em.fa-light.fa-industry-windows
-						span 08
-					p Processing factories
-			.grid-item
-				.list(class="bg-background-F5 p-4 md:p-8 rounded-t-[calc(8/1920*100rem)]")
-					.item 
-						span 26 years
-						p Years of establishment
-					.item 
-						span 50,000
-						p Tons of finished products/year
-					.item 
-						span 70+
-						p Countries exporting
-				.video-popup 
-					a(href="https://source.unsplash.com/random/?Cryptocurrency&1" class="img-ratio pt-[calc(240/360*100%)] sm:pt-[26%] lg:pt-[calc(222/416*100%)]" data-fancybox)
-						img(src="https://source.unsplash.com/random/?Cryptocurrency&1", alt="")
-						.btn-play
-							em.fa-light.fa-play
-			.grid-item
-				div(class="bg-red-500 h-full px-5 py-7.5 rounded-[calc(8/1920*100rem)]")
-					.content 
-						.icon 
-							em.fa-light.fa-fish
-							span 100.000
-						p Tons of asc raw materials per year
-			.grid-item
-				.img-src(class="img-ratio pt-[calc(240/360*100%)] sm:pt-[26%] lg:pt-[calc(334/416*100%)]")
-					+PugImg()
-				.content(class="absolute top-5 left-5")
-					.icon 
-						span 300 ha
-					p Total area
+			.home-2-swiper.relative
+				.swiper
+					.swiper-wrapper
+						.swiper-slide
+							.item
+								.icon
+									img(src="http://paloma.local/wp-content/uploads/2023/07/High-end-brand.svg", alt="")
+								h3 High-end brand
+						.swiper-slide
+							.item
+								.icon
+									img(src="http://paloma.local/wp-content/uploads/2023/07/High-end-brand.svg", alt="")
+								h3
+									| Friendly and easy to
+									br
+									| use
+						.swiper-slide
+							.item
+								.icon
+									img(src="http://paloma.local/wp-content/uploads/2023/07/High-end-brand.svg", alt="")
+								h3 Professiona lafter-sales mode
+				.wrap-navigation-slide
+					.progressbar-style-2
+						.swiper-pagination

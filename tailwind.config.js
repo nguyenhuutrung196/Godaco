@@ -43,12 +43,11 @@ module.exports = {
 				sm: "576px",
 				md: "768px",
 				lg: "1024px",
-				xl: "calc(1372/1920*100rem)",
+				xl: "calc(1470/1920*100rem)",
 			}, 
 		},
 		fontFamily: {
 			primary: ["League Spartan", "sans-serif"],
-			secondary: ["Italianno", "cursive"],
 			awesome: ['"Font Awesome 6 Pro"'],
 		},
 		fontSize: {
@@ -273,10 +272,6 @@ module.exports = {
 					800: "#021424",
 					900: "#01080E",
 				},
-				"gray-black":{
-					900: "#050505",
-				},
-
 			},
 			animation: {
 				"spin-circle": "rotateCircle 20s linear infinite",

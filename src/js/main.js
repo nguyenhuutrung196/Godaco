@@ -23,15 +23,11 @@ $(document).ready(function () {
 	buttonToTop();
 	clickLoadMoreAjax();
 	handleReport();
-	// clickScroll();
+	clickScroll();
 
 	// Custom
 	handleToggleFaq();
 	handleSlideProductList();
-
-	/*==================== Lazyload JS ====================*/
-	var observer = lozad(); // lazy loads elements with default selector as '.lozad'
-	observer.observe();
 });
 function handleReport() {
 	if (!$(".section-infomation-disclosure").length) return;
@@ -185,3 +181,7 @@ function handleSlideProductList() {
 		});
 	});
 }
+
+/*==================== Lazyload JS ====================*/
+var observer = lozad(); // lazy loads elements with default selector as '.lozad'
+observer.observe();

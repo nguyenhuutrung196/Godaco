@@ -1,57 +1,27 @@
 .home-2
-	.home-2-bottom
-		@apply mt-6 grid gap-7.5
+	@media(max-width: 1023.98px)
+		@apply bg-[#e4dfe0]
+	&-top
+		@apply py-10
 		@screen lg
-			@apply gap-y-0
-			grid-template-rows: rr(184px) repeat(2, 1fr)
-			grid-template-columns: repeat(3, 1fr)
-	.grid-item
-		&:nth-child(2)
-			img
-				border-radius: rr(8px) rr(8px) 0 0
-			.content
-				border-radius: 0 0 rr(8px) rr(8px)
-				@apply bg-blue-700 px-5 pt-7.5 pb-6
-		&:nth-child(3)
-			img
-				border-radius: 0 0 rr(8px) rr(8px)
-		&:nth-child(5)
-			.img-src
-				&>img
-					@apply rounded-[calc(8/1920*100rem)]
+			@apply pt-[calc(112/1920*100rem)] pb-[calc(187/1920*100rem)]
+		@media(max-width: 1023.98px)
+			background-image: none #{!important}
+	&-bottom
+		@apply pb-10
 		@screen lg
-			&:nth-child(1)
-				grid-area: 1 / 1 / 2 / 2
-				@apply pb-8
-			&:nth-child(2)
-				grid-area: 2 / 1 / 4 / 2
-				@apply pb-18
-			&:nth-child(3)
-				grid-area: 1 / 2 / 4 / 3
-			&:nth-child(4)
-				grid-area: 1 / 3 / 2 / 4
-				@apply pb-8
-			&:nth-child(5)
-				grid-area: 2 / 3 / 4 / 4
-				@apply pb-18 relative
+			@apply border-b border-gray-300 pb-0
+	.home-2-swiper
+		@apply max-w-[calc(992/1920*100rem)] mx-auto
 		.item
-			&>span
-				@apply global-text-40 font-medium text-blue-500
-			&>p
-				@apply mt-1.5 global-text-24 text-gray-black-900
-			&+.item
-				@apply mt-[calc(23/1920*100rem)]
-		.video-popup
-			.btn-play
-				background: linear-gradient(129deg, #275394 0%, #2979B6 51.56%, #2B98D1 100%)
-				@apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
-				@apply w-20 h-20 rounded-full flex-center text-white text-32
-	.content
-		.icon
-			@apply flex text-white items-end gap-3 md:gap-8
-			em
-				@apply text-32 md:text-[calc(48/1920*100rem)] leading-1.2
-			span
-				@apply text-28 md:text-4xl font-medium leading-1.2
-		&>p
-			@apply text-white global-text-24 mt-1.5
+			@apply flex flex-col items-center
+			.icon
+				@apply h-[calc(190/1920*100rem)]
+				img
+					@apply h-full object-contain
+			h3
+				@apply text-center mt-[calc(12/1920*100rem)]
+		@screen lg
+			@apply -top-[calc(95/1920*100rem)]
+		@media(max-width: 767.98px)
+			@apply pb-8

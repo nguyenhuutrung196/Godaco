@@ -1,20 +1,13 @@
 .home-1
-	&-swiper
-		@apply mt-8
-		.item
-			@apply bg-stroke-CC/50 block px-2.5 pb-3.5 relative
-			&::after
-				content: ''
-				// height: rr(2px)
-				@apply absolute left-0 bottom-0 h-1 opacity-0 w-0
-				@apply transition-all duration-300
-			&:hover
-				&::after
-					@apply bg-blue-500 w-full opacity-100
-				h3
-					@apply text-red-500
+	.item
+		padding: rr(30px) rr(113px)
+		@apply bg-white flex flex-col h-full
+		&:hover
+			h3
+				@apply scale-110
+		.icon
+			@apply h-[calc(72/1920*100rem)] text-center
+			img
+				@apply h-full object-contain
 		h3
-			@apply global-text-24 font-medium text-center
-			@apply transition-all duration-300
-		@media(max-width: 1279.98px)
-			@apply pb-5
+			@apply text-center mt-6 transition-all duration-300

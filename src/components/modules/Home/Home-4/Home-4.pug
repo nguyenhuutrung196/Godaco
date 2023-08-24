@@ -1,25 +1,16 @@
-section.home-4
-	.container 
-		h2(class="relative z-20 text-center global-text-48 font-light text-blue-500") Certifications
-		.desc 
-			p GODACO has invested heavily in our farming capability especially our ASC certified fish farming areas which cover over 300ha capable of supplying over 100,000 tons of ASC raw materials per year.
-		.home-4-swiper.relative
-			.swiper
-				.swiper-wrapper
-					-for(i=0;i<4;i++)
-						.swiper-slide
-							.img-src
-								img(src="./img/home/3.png" alt="")
-						.swiper-slide
-							.img-src
-								img(src="./img/home/4.png" alt="")
-			.wrap-navigation-slide.progressbar-style-2(class="xl:hidden")
-				.swiper-pagination
-			.wrap-button-slide.slide-style-1
-				.btn-prev
-				.btn-next
-.line-svg(class="my-15")
-	.container 
-		<svg xmlns="http://www.w3.org/2000/svg" width="1312" height="14" viewBox="0 0 1312 14" fill="none">
-			<path opacity="0.4" d="M2.09819e-06 13.0005C41.4141 13.0005 38.7636 1.00024 79.8465 1.00023C120.929 1.00022 121.261 13.0005 161.681 13.0004C202.101 13.0004 202.432 1.00021 244.84 1.0002C287.248 1.00019 285.923 13.0004 326.343 13.0004C366.764 13.0004 366.101 1.00018 407.515 1.00017C448.929 1.00017 450.586 13.0004 489.349 13.0004C528.113 13.0004 529.438 1.00015 570.853 1.00014C612.267 1.00014 613.592 13.0004 652.356 13.0004C691.119 13.0004 693.438 1.00012 732.533 1.00012C771.628 1.00011 774.941 13.0003 816.024 13.0003C857.107 13.0003 857.77 1.00009 898.19 1.00009C938.61 1.00008 941.261 13.0003 980.024 13.0003C1018.79 13.0003 1020.44 1.00007 1059.87 1.00006C1099.3 1.00005 1101.95 13.0003 1142.7 13.0003C1183.45 13.0003 1184.44 1.00004 1224.86 1.00003C1265.28 1.00002 1267.6 13.0003 1312 13.0002" stroke="#3974A5"/>
-		</svg>
+section.home-4.relative.section-large
+	.container-custom-1500
+		h2(class="title-global-1 mx-auto ") BLOGS
+		div(class="border-b border-[#D1D1D1] pb-9")
+			.wrapper(class="max-w-[calc(1410/1920*100rem)] mx-auto")
+				.row(class="gap-y-6")
+					-for(i=0;i<=2;i++)
+						.col(class="lg:w-4/12")
+							+NewsItem()
+		.btn-wrapper
+			a(href="#").btn.btn-1
+				span VIEW ALL
+				<svg xmlns="http://www.w3.org/2000/svg" width="26" height="19" viewBox="0 0 26 19" fill="none">
+					<circle cx="17" cy="9.27344" r="8.5" stroke="white"/>
+					<path d="M19.7701 8.95459L15.2471 4.43155C15.0847 4.24182 14.7991 4.21971 14.6094 4.38222C14.4197 4.5447 14.3976 4.83023 14.5601 5.01996C14.5752 5.03764 14.5917 5.05416 14.6094 5.06928L18.359 8.8234H0.452289C0.202511 8.8234 0 9.02591 0 9.27573C0 9.52555 0.202511 9.72802 0.452289 9.72802H18.359L14.6094 13.4776C14.4197 13.6401 14.3976 13.9256 14.5601 14.1153C14.7226 14.3051 15.0081 14.3272 15.1978 14.1647C15.2155 14.1495 15.232 14.133 15.2471 14.1153L19.7702 9.59229C19.9455 9.41593 19.9455 9.13102 19.7701 8.95459Z" fill="white"/>
+				</svg>

@@ -1,28 +1,16 @@
-section.home-3.section-medium
-	.container 
-		h2(class="relative z-20 text-center global-text-48 font-light text-blue-500 mb-6") Competitive Advantage
-		.row
-			.col(class="lg:w-4/12")
-				.box-img(class="img-ratio pt-[calc(772/416*100%)]")
-					img(src="./img/home/2.png", alt="")
-			.col(class="lg:w-8/12")
-				.desc 
-					p GODACO competitive advantage stems from our Vertically Integrated System, ensuring complete control and self-sufficiency throughout the production process. We oversee every stage, from breeding and farming to aqua-feed and cold storage, enabling us to achieve 100% self-supply of raw materials, enabling the production of over 70,000 tons of high-quality finished products and valuable by-products per year.
-				.btn-wrap 
-					a(href="#" class="btn btn-1")
-						span What we do
-						em.fa-light.fa-arrow-right-long
-				.home-3-swiper 
-					.swiper
-						.swiper-wrapper
-							-for(i=0;i<5;i++)
-								.swiper-slide
-									.img-src(class="img-ratio pt-[calc(414/864*100%)]")
-										+PugImg()
-					div(class="mt-6 flex items-center justify-end gap-5")
-						.count-index 
-							span.number-index 1
-							span.total-index 4
-						.wrap-button-slide.slide-default
-							.btn-prev
-							.btn-next
+section.home-3.relative.section-large
+	.container-custom-1500
+		h2(class="title-global-1 mx-auto ") CATALOG
+		div(class="border-b border-[#D1D1D1] pb-9")
+			.wrapper(class="max-w-[calc(1410/1920*100rem)] mx-auto")
+				.row
+					-for(i=0;i<4;i++)
+						.col(class="sm:w-1/2 lg:w-3/12")
+							+CatalogItem()
+		.btn-wrapper
+			a(href="#").btn.btn-1
+				span VIEW ALL
+				<svg xmlns="http://www.w3.org/2000/svg" width="26" height="19" viewBox="0 0 26 19" fill="none">
+					<circle cx="17" cy="9.27344" r="8.5" stroke="white"/>
+					<path d="M19.7701 8.95459L15.2471 4.43155C15.0847 4.24182 14.7991 4.21971 14.6094 4.38222C14.4197 4.5447 14.3976 4.83023 14.5601 5.01996C14.5752 5.03764 14.5917 5.05416 14.6094 5.06928L18.359 8.8234H0.452289C0.202511 8.8234 0 9.02591 0 9.27573C0 9.52555 0.202511 9.72802 0.452289 9.72802H18.359L14.6094 13.4776C14.4197 13.6401 14.3976 13.9256 14.5601 14.1153C14.7226 14.3051 15.0081 14.3272 15.1978 14.1647C15.2155 14.1495 15.232 14.133 15.2471 14.1153L19.7702 9.59229C19.9455 9.41593 19.9455 9.13102 19.7701 8.95459Z" fill="white"/>
+				</svg>

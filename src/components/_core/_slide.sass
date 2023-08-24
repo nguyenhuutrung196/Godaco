@@ -2,11 +2,11 @@
 	display: flex
 	align-items: center
 	.btn-prev, .btn-next
-		@apply flex-center cursor-pointer
+		@apply flex items-center justify-center
 		@apply transition-all duration-300
 		&:before
-			@apply font-awesome text-xl
-			@apply transition-all duration-300
+			@apply font-awesome text-30 font-light leading-none cursor-pointer
+			// @apply absolute w-full h-full top-0 left-0
 	.btn-prev
 		&:before
 			content: '\f053'
@@ -16,73 +16,45 @@
 	.swiper-button-disabled
 		@apply opacity-60
 	&.slide-default
-		@apply gap-5
-		.btn-prev, .btn-next
-			@apply rounded-full border border-blue-200 bg-transparent w-10 h-10 md:w-15 md:h-15 
-			&::before
-				@apply text-blue-500
-			&:hover
-				@apply bg-red-500 border-red-500
-				&::before
-					@apply text-white
+		@apply flex items-center justify-center gap-6
+		@media(min-width: 1280px)
+			.btn-prev, .btn-next
+				@apply absolute top-1/2 -translate-y-1/2 text-gray-600
+			.btn-prev
+				@apply -left-[calc(42/1920*100rem)]
+			.btn-next
+				@apply -right-[calc(42/1920*100rem)]
+		@media(max-width: 1279.98px)
+			@apply hidden
 	&.slide-style-1
 		.btn-prev, .btn-next
-			@apply absolute top-1/2 -translate-y-1/2
-			@apply rounded-full border border-blue-200 bg-transparent w-15 h-15 
-			&::before
-				@apply text-blue-500
-			&:hover
-				@apply bg-red-500 border-red-500
-				&::before
-					@apply text-white
+			@apply absolute top-1/2 -translate-y-1/2 z-10  bg-white w-9 h-9 lg:w-[calc(70/1920*100rem)] lg:h-[calc(70/1920*100rem)]
 		.btn-prev
-			@apply -left-[calc(92/1920*100rem)]
+			@apply left-4
 		.btn-next
-			@apply -right-[calc(92/1920*100rem)]
-		@media(max-width: 1279.98px)
-			@apply hidden
-	&.slide-style-2
-		.btn-prev, .btn-next
-			@apply absolute top-1/2 -translate-y-1/2
-			@apply rounded-full border border-blue-200 bg-white w-15 h-15 z-10
-			&::before
-				@apply text-blue-500
-			&:hover
-				@apply bg-red-500 border-red-500
-				&::before
-					@apply text-white
-		.btn-prev
-			@apply left-5
-		.btn-next
-			@apply right-5
-		@media(max-width: 1279.98px)
-			@apply hidden
+			@apply right-4
 
-.wrap-navigation-slide
-	&.progressbar-style-1
-		.swiper-pagination
-			@apply text-center flex flex-col gap-2.5
-			@apply left-0 bottom-[calc(36/1920*100rem)]
-			@screen xl
-				@apply bottom-[calc(88/1920*100rem)]
-		.swiper-pagination-bullet
-			width: rr(3px)
-			height: rr(15px)
-			@apply bg-white opacity-50 rounded-25 transition-all duration-300
+.progressbar-style-1
+	.swiper-pagination
+		@apply text-center flex flex-col gap-2.5
+		@apply left-0 bottom-[calc(36/1920*100rem)]
+		@screen xl
+			@apply bottom-[calc(88/1920*100rem)] 
+	.swiper-pagination-bullet
+		width: rr(3px)
+		height: rr(15px)
+		@apply bg-white opacity-50 rounded-25 transition-all duration-300
+		&-active
+			height: rr(30px)
+			@apply opacity-100
+		@screen md
+			height: rr(30px)
 			&-active
-				height: rr(30px)
-				@apply opacity-100
-			@screen md
-				height: rr(30px)
-				&-active
-					height: rr(60px)
+				height: rr(60px)
 
-	&.progressbar-style-2
-		.swiper-pagination
-			@apply bottom-0
-		.swiper-pagination-bullet
-			&-active
-				@apply bg-blue-500
+.progressbar-style-2
+	.swiper-pagination
+		@apply bottom-0
 
 .swiper-button-lock
 	@apply hidden #{!important}

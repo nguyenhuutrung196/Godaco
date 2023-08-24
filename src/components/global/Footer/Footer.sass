@@ -1,35 +1,70 @@
 footer
-	&::before
-		content: ''
-		background-image: url("../img/home/7.png")
-		background-size: cover
-		background-repeat: no-repeat
-		background-position: center
-		@apply absolute left-0 -top-6 w-full h-[calc(160/1920*100rem)]
-	h3
-		@apply text-black global-text-24 font-normal mb-3
-	.footer-mail
-		@apply text-xl leading-1.4 text-body-text-33
-	.footer-socials
-		@apply flex gap-2.5
-		a
-			@apply inline-flex items-center justify-center h-12 w-12 rounded-full bg-white 
-			@apply text-blue-500 text-2xl
-	.footer-links
-		@apply flex items-center gap-8.5 mb-3
-		a
-			@apply text-body-text-66 leading-[calc(28/16)]
-	.copy-right
-		@apply text-body-text-66
-	.logo-bct
-		@apply mt-4 w-[calc(158/1920*100rem)]
-		img
-			@apply w-full object-contain
-	@media(max-width: 1023.98px)
-		.row
-			.col:last-child
-				@apply mt-7.5
-	@media(max-width: 767.98px)
-		.row
-			.col+.col
-				@apply mt-7.5
+	.wrapper
+		@apply flex justify-between
+		@media(max-width: 767.98px)
+			@apply flex-wrap gap-8
+	.footer-top
+		&.section-large
+			@screen xl
+				@apply pt-9
+		h3
+			@apply text-body-text-33 pb-[calc(7/1920*100rem)] relative mb-6
+			&::before
+				content: ''
+				@apply absolute bottom-0 left-0 h-[3px] w-6 rounded-[calc(3/1920*100rem)] 
+		.footer-menu
+			ul
+				@apply flex flex-col gap-3
+			a
+				@apply  text-body-text-33 transition-all duration-300
+		.box-right
+			flex: 0 0 100%
+			max-width: 100%
+			@screen md
+				flex: 0 0 calc(450/1172*100%)
+				max-width: calc(450/1172*100%)
+		.form-newsletter
+			input
+				@apply w-full h-[42px] px-4  text-body-text-33 rounded-25 border border-gray-300
+			button
+				@apply w-full  flex-center rounded-25 h-[42px] mt-2 gap-2
+				@apply transition-all duration-300
+				span
+					@apply text-white
+				&:hover
+					@apply bg-secondary-1
+
+	.footer-bottom
+		.box-left
+			h3
+				@apply text-secondary-1 mb-4
+			ul
+				@apply flex flex-col gap-5
+			li
+				@apply flex items-center gap-4
+				p
+					@apply  text-body-text-33
+			.icon
+				flex: 0 0 30px
+				max-width: 30px
+				height: 30px
+				@apply flex-center  w-full
+				i
+					@apply text-white
+		.box-right
+			flex: 0 0 100%
+			max-width: 100%
+			@apply flex flex-col md:justify-end
+			@screen md
+				flex: 0 0 calc(240/1172*100%)
+				max-width: calc(240/1172*100%)
+			ul
+				@apply flex items-center gap-6 mb-4 md:justify-end
+				a
+					@apply flex-center w-8 h-8 border border-body-text-66
+					i
+						@apply text-body-text-66
+			p
+				@apply  text-body-text-33
+				@screen md
+					@apply text-right

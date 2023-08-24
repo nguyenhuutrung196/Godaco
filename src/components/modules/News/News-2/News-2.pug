@@ -1,0 +1,20 @@
+section.news-2.py-20
+    .img-bg 
+        img(src="./img/news/mussel1.png" alt="" class="relative left-7 top-[881px]")
+    .container
+        .btnNews2
+            .btn.btn-left Event News
+            .btn.btn-right Industry News
+        .list-news(class="grid grid-cols-1 gap-4 lg:grid-cols-3 lg:gap-7")
+            +ListNews2('./newsdetail.html', './img/news/n3.png','31.03.2023','GODACO at Shanghai international seafood exhibition')
+            +ListNews2('#', './img/news/n4.png','31.03.2023','GODACO SEAFOOD - the foodex 48th japan international food & beverage exhibition')
+            +ListNews2('#', './img/news/n5.png','31.03.2023','Welcome to the official trading day of GODACO SEAFOOD')
+            +ListNews2('#', './img/news/n6.png','31.03.2023','GODACO at Shanghai international seafood exhibition')
+            +ListNews2('#', './img/news/n7.png','31.03.2023','GODACO SEAFOOD - the foodex 48th japan international food & beverage exhibition')
+            +ListNews2('#', './img/news/n8.png','31.03.2023','Welcome to the official trading day of GODACO SEAFOOD')
+        .pagination
+            .pagi 1
+            .pagi 2
+            .pagi 3
+    .img-bg 
+        img(src="./img/news/fish1.png" alt="" class="relative right-[30px] top-[127px]")

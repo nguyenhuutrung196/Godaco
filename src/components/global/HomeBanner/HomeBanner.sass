@@ -1,13 +1,4 @@
 .home-banner
-	&::before
-		content: ''
-		background-image: url("../img/icon/before_homebanner.svg")
-		background-position: center
-		background-repeat: no-repeat
-		background-size: cover
-		@apply absolute bottom-0 left-0 w-full z-20 h-25 translate-y-17
-		@screen md
-			@apply h-[calc(170/1920*100rem)] translate-y-[calc(128/1920*100rem)]
 	.item
 		@apply relative
 		&::before, &::after
@@ -19,9 +10,6 @@
 		&::after
 			background: linear-gradient(180deg, rgba(0, 0, 0, 0.00) 0%, #000 100%)
 			@apply bottom-0 h-[calc(290/1920*100rem)]
-		.img
-			&>img
-				@apply w-full
 	.box-content
 		@apply absolute bottom-[10%] xl:bottom-[calc(160/1920*100rem)] left-1/2 -translate-x-1/2 z-20
 		@apply xl:max-w-[calc(1248/1920*100rem)] w-full text-center

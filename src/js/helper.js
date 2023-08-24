@@ -161,7 +161,7 @@ export function clickScroll() {
 			var offsetSection = $("#" + "section_" + value).offset().top
 			var docScroll = $(document).scrollTop();
 			var docScroll1 = docScroll + 1;
-			
+
 			if (docScroll1 >= offsetSection) {
 				$(".menu-innert-company li a").removeClass("active");
 				$(".menu-innert-company li a:link").addClass("inactive");
