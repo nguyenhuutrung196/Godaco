@@ -1,0 +1,21 @@
+.about-6
+	&.section-medium
+		@screen xl
+			@apply pt-[calc(116/1920*100rem)]
+	&::before
+		content: ''
+		background-image: url('../img/about/8.png')
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+		@apply absolute left-0 -top-10 w-full h-[calc(1483/1920*100rem)] z-10
+	.box-content
+		h3
+			@apply global-text-20 font-medium text-blue-500 mt-5
+		ul
+			@apply mt-3
+		li
+			@apply text-black text-lg leading-1.33333 py-1.5 bg-white pl-5.5
+			@apply border-l-2 border-red-500
+			&+li
+				@apply mt-2

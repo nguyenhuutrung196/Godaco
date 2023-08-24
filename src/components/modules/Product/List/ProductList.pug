@@ -1,0 +1,39 @@
+section.product-list 
+	.box-top.section-medium
+		.container
+			h1(class="global-text-48 text-blue-500 font-light text-center") Seafood
+			.desc 
+				p GODACO offers premium, sustainably sourced seafood. We prioritize responsible production, from pond management to processing, meeting international standards. Well-known for our Pangasius, Clams, Eel, Octopus, and new Agriculture line of Fruits, we aim to exceed customer needs in today's fast-paced lifestyle. Our environmentally friendly practices and prestigious certifications like BAP 4-Star and ASC ensure our position in the market. With over 20 years of global export experience, GODACO proudly serves 50 markets worldwide.
+			.box-top-swiper.relative
+				.swiper
+					.swiper-wrapper
+						-for(i=0;i<8;i++)
+							.swiper-slide
+								.item 
+									.box-img
+										a(href="img-ratio pt-[calc(162/182*100%)]")
+											img(src="./img/product/list/1.png" alt="")
+									.content 
+										h2
+											a Value-added
+				.wrap-navigation-slide.progressbar-style-2(class="xl:hidden")
+					.swiper-pagination
+				.wrap-button-slide.slide-style-1
+					.btn-prev
+					.btn-next
+	.box-bottom.section-large.relative
+		.container(class="relative z-20")
+			h2(class="global-text-36 text-blue-500 font-medium text-center") Value-added
+			ul 
+				li 
+					a Breaded fish
+				li 
+					a Marinated fish
+				li 
+					a.active Others
+			.desc 
+				p Godaco offers convenient and appetizing seafood options for health-conscious consumers. Our ready-to-cook and fully-cooked Value-Added products, including breaded and marinated varieties, cater to modern lifestyles, delivering high-quality taste and saving time. Businesses benefit from our customizable fish fillets, serving diverse customer needs. Join us for a flavorful and convenient culinary experience with Godaco seafood products
+			.row(class="gap-y-8")
+				-for(i=0;i<6;i++)
+					.col(class="md:w-1/2 lg:w-4/12")
+						+ProductItem()

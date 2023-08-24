@@ -1,0 +1,35 @@
+footer
+	&::before
+		content: ''
+		background-image: url("../img/home/7.png")
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+		@apply absolute left-0 -top-6 w-full h-[calc(160/1920*100rem)]
+	h3
+		@apply text-black global-text-24 font-normal mb-3
+	.footer-mail
+		@apply text-xl leading-1.4 text-body-text-33
+	.footer-socials
+		@apply flex gap-2.5
+		a
+			@apply inline-flex items-center justify-center h-12 w-12 rounded-full bg-white 
+			@apply text-blue-500 text-2xl
+	.footer-links
+		@apply flex items-center gap-8.5 mb-3
+		a
+			@apply text-body-text-66 leading-[calc(28/16)]
+	.copy-right
+		@apply text-body-text-66
+	.logo-bct
+		@apply mt-4 w-[calc(158/1920*100rem)]
+		img
+			@apply w-full object-contain
+	@media(max-width: 1023.98px)
+		.row
+			.col:last-child
+				@apply mt-7.5
+	@media(max-width: 767.98px)
+		.row
+			.col+.col
+				@apply mt-7.5

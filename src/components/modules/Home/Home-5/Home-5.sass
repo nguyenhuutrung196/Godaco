@@ -1,0 +1,23 @@
+.home-5
+	&.section-medium
+		@apply pt-0
+	&-swiper
+		@media(max-width: 1279.98px)
+			@apply pb-5
+	.item
+		&:hover
+			.content
+				h3
+					@apply text-red-500
+	.img-src
+		a
+			@apply rounded-[calc(8/1920*100rem)]
+	.content
+		time
+			@apply text-body-text-99 leading-1.5 my-3 inline-block
+			&::before
+				content: '\f017'
+				@apply font-awesome text-lg leading-1.25 inline-block mr-2
+		h3
+			@apply global-text-24 font-medium text-black line-clamp-3
+			@apply transition-all duration-300

@@ -1,0 +1,32 @@
+.wwd-list
+	.item
+		&+.item
+			@apply mt-5
+		@screen lg
+			&:nth-child(odd)
+				.box-img
+					@apply order-1
+				.box-content
+					@apply order-1
+			&:nth-child(even)
+				.box-img
+					@apply order-2
+				.box-content
+					@apply order-1
+	.box-img, .box-content
+		flex: 0 0 100%
+		max-width: 100%
+		width: 100%
+	.box-content
+		@apply bg-[#F1F6FD]
+		.icon
+			@apply h-16 w-16
+			img
+				@apply h-full w-full object-contain
+	@screen lg
+		.box-img
+			flex: 0 0 calc( 864/1312 * 100% )
+			max-width: calc( 864/1312 * 100% )
+		.box-content
+			flex: 0 0 calc( 428/1312 * 100% )
+			max-width: calc( 428/1312 * 100% )

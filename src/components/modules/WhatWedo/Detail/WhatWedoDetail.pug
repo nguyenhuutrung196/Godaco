@@ -1,0 +1,65 @@
+section.wwd-detail
+	.container
+		.aquaculture.section-medium
+			.div(class="text-center")
+				h1(class="global-text-36 text-blue-500 font-medium") Aquaculture
+				.desc(class="max-w-[calc(960/1920*100rem)] mx-auto my-6")
+					p Since 2005, Godaco Seafood has significantly increased its Pangasius farming areas to fully self-supply raw materials for production
+			.aquaculture-swiper.relative
+				.swiper
+					.swiper-wrapper
+						.swiper-slide 
+							.item 
+								h4 + 300 ha
+								.desc 
+									p Total Area
+						.swiper-slide 
+							.item 
+								h4 >150,000
+								.desc 
+									p Tons of raw materials Capacity per year
+						.swiper-slide 
+							.item 
+								h4 ~50 ha
+								.desc 
+									p Total ASC Area
+				.wrap-navigation-slide.progressbar-style-2
+					.swiper-pagination
+		.certifications.home-4
+			h2(class="relative z-20 text-center global-text-48 font-light text-blue-500") Certifications
+			.desc 
+				p GODACO has invested heavily in our farming capability especially our ASC certified fish farming areas which cover over 300ha capable of supplying over 100,000 tons of ASC raw materials per year.
+			.home-4-swiper.relative
+				.swiper
+					.swiper-wrapper
+						-for(i=0;i<4;i++)
+							.swiper-slide
+								.img-src
+									img(src="./img/home/3.png" alt="")
+							.swiper-slide
+								.img-src
+									img(src="./img/home/4.png" alt="")
+				.wrap-navigation-slide.progressbar-style-2(class="xl:hidden")
+					.swiper-pagination
+				.wrap-button-slide.slide-style-1
+					.btn-prev
+					.btn-next
+		.info.section-medium
+			.item.flex(class="gap-5 flex-wrap lg:flex-nowrap")
+				.box-img
+					.img-src(class="img-ratio pt-[calc(430/646*100%)]")
+						+PugImg()
+				.box-content
+					.wrap(class="p-15 lg:py-0 text-white")
+						h3 Farming Areas of GODACO
+						.desc
+							p Godaco boasts an expansive Pangasius farming area spanning over 300 hectares (equivalent to approximately 140 football fields), solely devoted to closed farming practices. Each year, we supply our processing plants with over 150,000 tons of raw fish, ensuring a steady and abundant source for our operations.
+			.item.flex(class="gap-5 flex-wrap lg:flex-nowrap")
+				.box-img
+					.img-src(class="img-ratio pt-[calc(430/646*100%)]")
+						+PugImg()
+				.box-content
+					.wrap(class="p-15 lg:py-0 text-white")
+						h3 Fishmeal Plans
+						.desc
+							p We develop our tailored feed formulations in our very own Aqua-feed Factory (Go Dang Vinh Long) for optimal nutrition at each fish growth stage. Our farmers receive training on feed and feeding, emphasizing the importance of nutritious feed for quality products and sustainable farming practices. We continuously experiment with new formulations to promote healthy fish and a sustainable environment. Our feed mixes are produced and monitored under strict controls, contributing to advancements in feed science over the past two decades and beyond.

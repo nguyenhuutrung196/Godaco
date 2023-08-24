@@ -1,0 +1,230 @@
+body
+	--menu: #08518F
+	--menu-active: #C4212B
+	--border: #CCCCCC
+	--background: white
+
+.homepage
+	--menu: #08518F
+	--menu-active: #C4212B
+	--border: #CCCCCC
+	--background: white
+	@screen xl
+		--menu: white
+		--border: white
+		--background: transparent
+		--menu-active: white
+	.header-logo
+		a
+			&.header-logo-desktop
+				@apply hidden
+			&.header-logo-mobile
+				@apply block
+			@screen xl
+				&.header-logo-desktop
+					@apply block
+				&.header-logo-mobile
+					@apply hidden
+	
+header
+	background-color: var(--background)
+	@apply flex items-center fixed top-0 left-0 w-full h-20 lg:h-25 z-1000
+	&.active
+		@apply bg-white
+		box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.08)
+		.header-logo
+			a
+				&.header-logo-desktop
+					@apply hidden
+				&.header-logo-mobile
+					@apply block
+		.menu
+			&>li
+				&.active
+					a
+						@apply text-red-500
+						&::before
+							@apply bg-red-500
+				&.has-child
+					em
+						@apply text-blue-500
+			a
+				@apply text-blue-500
+		.header-language
+			ul
+				li
+					&.active
+						a
+							@apply text-red-500
+							&::before
+								@apply bg-red-500
+					&::after
+						@apply bg-stroke-CC
+					a
+						@apply relative text-blue-500
+		.header-menu-search
+			em
+				@apply text-blue-500
+
+	.header-wrapper
+		@apply px-10 md:px-25 w-full flex items-center justify-between
+
+	.header-logo
+		@apply max-h-[calc(75/1920*100rem)] h-full flex-shrink-0 basis-[calc(187/1920*100rem)] max-w-[calc(187/1920*100rem)] w-full
+		a
+			@apply block h-full
+			img
+				@apply h-full object-contain
+			&.header-logo-desktop
+				@apply hidden
+			&.header-logo-mobile
+				@apply block
+
+	.header-hambuger
+		@apply flex-shrink-0 basis-[calc(40/1920*100rem)] max-w-[calc(40/1920*100rem)] w-full flex flex-col gap-1 mt-auto mb-auto xl:hidden
+		&.active
+			span
+				&:first-child
+					transform: translateY(10px) rotate(45deg)
+				&:nth-child(2)
+					transform: scaleX(0)
+				&:last-child
+					transform: translateY(-7px) rotate(-45deg)
+		span
+			@apply bg-blue-500 pointer-events-none block w-full h-[5px] transition-all duration-300 rounded-3xl
+	.header-content
+		@apply flex items-center justify-between xl:w-full xl:flex-shrink-0 xl:basis-[calc(1421/1920*100rem)] xl:max-w-[calc(1421/1920*100rem)]
+	.header-menu
+		flex: 1
+		@apply w-full max-w-full
+	.menu
+		@apply flex items-center gap-16
+		&>li
+			@apply relative
+			&.active, &:hover
+				&>a
+					color: var(--menu-active)
+					&::before
+						background-color: var(--menu-active)
+			&.has-child
+				em
+					color: var(--menu)
+					@apply text-xl pl-4
+				&:hover
+					.drop-down
+						@apply opacity-100 visible
+		a
+			color: var(--menu)
+			@apply relative inline-flex whitespace-nowrap global-text-20 font-medium
+			@apply transition-all duration-300
+			&::before
+				content: ''
+				top: calc( 100% + rr(6px))
+				@apply absolute left-0 bg-transparent w-full h-[calc(1/1920*100rem)]
+				@apply transition-all duration-300
+		.drop-down
+			@apply absolute left-0 top-full opacity-0 invisible
+			ul
+				@apply py-5
+			li
+				@apply px-5
+				& + li
+					@apply mt-4
+				&.active
+					&>a
+						span
+							@apply border-b border-white opacity-100
+				a
+					@apply inline-flex
+					&:hover
+						span
+							@apply opacity-100
+				span
+					@apply opacity-75 text-white
+		.box-parent-category
+			@apply relative h-[calc(244/1920*100rem)] bg-red-500
+			li
+				&:hover
+					.sub-menu-product
+						@apply opacity-100 visible
+		.sub-menu-product
+			@apply absolute top-0 left-full bg-red-500 border-l border-red-400 opacity-0 invisible h-[calc(244/1920*100rem)]
+
+	.header-language
+		@apply relative
+		ul
+			@apply flex items-center
+			li
+				@apply relative pl-[calc(13.5/1920*100rem)] ml-[calc(13.5/1920*100rem)]
+				&.active, &:hover
+					a
+						color: var(--menu-active)
+						&::before
+							background-color: var(--menu-active)
+				&::after
+					content: ''
+					background-color: var(--border)
+					@apply absolute left-0 top-1/2 -translate-y-1/2 w-[calc(2/1920*100rem)] h-5
+				a
+					color: var(--menu)
+					@apply relative uppercase global-text-20
+					@apply transition-all duration-300
+					&::before
+						content: ''
+						top: calc( 100% + rr(6px))
+						@apply absolute left-0 bg-transparent w-full h-[calc(1/1920*100rem)]
+						@apply transition-all duration-300
+
+	.header-menu-search
+		em
+			color: var(--menu)
+			@apply text-xl cursor-pointer
+
+.header-menu-mobile
+	&.active
+		@apply translate-x-0
+	@apply fixed top-20 lg:top-25 left-0 h-screen z-50 bg-secondary-2 w-full  xl:hidden transition-all duration-500 -translate-x-full z-100
+	.header-language
+		ul
+			@apply flex gap-5 pl-4
+		li
+			&.active
+				a
+					@apply text-red-500
+		a
+			@apply text-blue-500 py-5 inline-flex uppercase
+	.header-menu
+		&>ul
+			li
+				@apply relative
+				&.active
+					&>a
+						@apply  font-bold bg-blue-500 text-secondary-2
+			&>li
+				@apply border-b border-blue-500/60 relative first:border-t-0
+				&>a
+					@apply flex items-center  px-4 h-[45px] justify-between text-blue-500
+				&.has-child
+					&>em
+						@apply hidden
+					.drop-down
+						@apply hidden
+				.dropdown-button
+					@apply absolute top-0 right-0 px-4 flex-center h-[42px]
+					em
+						@apply transition-all duration-300
+					&.active
+						em
+							@apply rotate-90
+				ul
+					&>li
+						&:last-child
+							&>a
+								@apply border-b-0
+						&>ul
+							&>li
+								&>a
+									padding-left: 30px
+					li
+						a
+							@apply px-4 py-4 flex items-center border-b border-white/30 bg-white

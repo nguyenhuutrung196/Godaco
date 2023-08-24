@@ -1,0 +1,40 @@
+@layer utilities
+	.container-custom-1500
+		max-width: 1560px
+		margin-left: auto
+		margin-right: auto
+		padding-left: 15px
+		padding-right: 15px
+		@screen lg
+			padding-left: 30px
+			padding-right: 30px
+	.container-custom-1172
+		max-width: 1232px
+		margin-left: auto
+		margin-right: auto
+		padding-left: 15px
+		padding-right: 15px
+		@screen 2xl
+			padding-left: 30px
+			padding-right: 30px
+
+	.global-text
+		&-48
+			@apply text-32 leading-1.166666
+		&-40
+			@apply text-28 leading-1.2
+		&-36
+			@apply text-4xl leading-1.166666
+		&-32
+			@apply text-32 leading-1.25
+		&-24
+			@apply text-2xl leading-1.33333
+		&-20
+			@apply text-xl leading-1.4
+		&-16
+			@apply text-base leading-1.5
+		@screen md
+			&-48
+				@apply text-6xl
+			&-40
+				@apply text-5xl

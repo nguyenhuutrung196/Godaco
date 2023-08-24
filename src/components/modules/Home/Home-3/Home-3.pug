@@ -1,0 +1,28 @@
+section.home-3.section-medium
+	.container 
+		h2(class="relative z-20 text-center global-text-48 font-light text-blue-500 mb-6") Competitive Advantage
+		.row
+			.col(class="lg:w-4/12")
+				.box-img(class="img-ratio pt-[calc(772/416*100%)]")
+					img(src="./img/home/2.png", alt="")
+			.col(class="lg:w-8/12")
+				.desc 
+					p GODACO competitive advantage stems from our Vertically Integrated System, ensuring complete control and self-sufficiency throughout the production process. We oversee every stage, from breeding and farming to aqua-feed and cold storage, enabling us to achieve 100% self-supply of raw materials, enabling the production of over 70,000 tons of high-quality finished products and valuable by-products per year.
+				.btn-wrap 
+					a(href="#" class="btn btn-1")
+						span What we do
+						em.fa-light.fa-arrow-right-long
+				.home-3-swiper 
+					.swiper
+						.swiper-wrapper
+							-for(i=0;i<5;i++)
+								.swiper-slide
+									.img-src(class="img-ratio pt-[calc(414/864*100%)]")
+										+PugImg()
+					div(class="mt-6 flex items-center justify-end gap-5")
+						.count-index 
+							span.number-index 1
+							span.total-index 4
+						.wrap-button-slide.slide-default
+							.btn-prev
+							.btn-next

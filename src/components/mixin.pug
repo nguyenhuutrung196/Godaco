@@ -1,0 +1,11 @@
+mixin PugImg()
+	img(data-src="https://source.unsplash.com/random/?Cryptocurrency&1" alt="" class="object-cover w-full h-full lozad" x-img)
+
+mixin ProductItem()
+	.item.item-product
+		.box-img 
+			a(href="#" class="img-ratio pt-[calc(276/416*100%)] zoom-img")
+				+PugImg()
+		.box-content 
+			h3 
+				a Sausages

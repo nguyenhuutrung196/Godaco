@@ -1,0 +1,108 @@
+section.product-detail.section-medium
+	.container
+		.row(class="gap-y-5")
+			.col(class="lg:w-8/12")
+				.box-left 
+					.swiper-thumb.relative
+						.swiper
+							.swiper-wrapper
+								-for(i=0;i<6;i++)
+									.swiper-slide
+										.box-img(class="img-ratio pt-[calc(68/102*100%)]")
+											+PugImg()
+						.wrap-button-slide
+							.btn-prev
+							.btn-next
+					.swiper-main.relative
+						.swiper
+							.swiper-wrapper
+								-for(i=0;i<6;i++)
+									.swiper-slide
+										.swiper-slide
+											.box-img(class="img-ratio pt-[calc(500/725*100%)]")
+												+PugImg()
+						.wrap-button-slide.slide-style-2
+							.btn-prev
+							.btn-next
+			.col(class="lg:w-4/12")
+				div(class="h-full p-8 lg:py-0 flex flex-col justify-center gap-6 bg-[#F1F6FD]")
+					h1(class="global-text-36 font-bold text-blue-500") Breaded Fillets
+					.desc 
+						p Our flavorful Pangasius fillets are expertly prepared with a crispy breaded coating and delightful marinade. With just a few minutes in the oven or air-fryer, this nutritious and delicious dish is ready to delight the whole family. Enjoy the convenience without compromising on taste or nutrition.
+
+section.product-info.section-small
+	.container 
+		.row(class="gap-y-5")
+			.col(class="lg:w-7/12")
+				div(data-toggle="tabslet")
+					ul.tabslet-tab
+						li 
+							a(href="#tab1") Description
+						li 
+							a(href="#tab2") Specifications
+					.tabslet-content#tab1
+						h3 Specifications
+						.desc
+							p
+								strong Net Weight: 
+								| 140gr - UP
+							p
+								strong Ingredients: 
+								| Pangasius Fillets, Spices, Predust, Batter, Breadcrumbs
+							p
+								strong Storage instructions: 
+								| -18°C in cold storage (freezer)
+							p(class="text-red-500")
+								strong Cooking Instructions
+							p - Oven or Air-fryer: 190°C–200°C | 20-22 mins
+							p - Deep fry : 165°C-170°C | 6-8 mins
+					.tabslet-content#tab2
+						p tab2
+			.col(class="lg:w-5/12")
+				.box-img(class="lg:pr-11")
+					.img-src(class="img-ratio pt-[calc(392/484*100%)]")
+						+PugImg()
+
+section.product-form(class="bg-[#F1F6FD] section-medium")
+	.container 
+		.row(class="gap-y-5")
+			.col(class="lg:w-1/2")
+				h3(class="global-text-24 text-blue-500 font-semibold") Get a quote
+				p(class="global-text-20 text-black my-5") Different shapes, different forms, different flavors are tailored or customized to customers’ preferences and requirements
+				.form-wrap 
+					.row(class="gap-y-5")
+						.col(class="w-1/2")
+							.form-group
+								input(type="text" placeholder="Name")
+						.col(class="w-1/2")
+							.form-group
+								input(type="text" placeholder="Name")
+						.col(class="w-1/2")
+							.form-group
+								input(type="text" placeholder="Name")
+						.col(class="w-1/2")
+							.form-group
+								input(type="text" placeholder="Name")
+					.form-group
+						textarea(placeholder="Name")
+					.form-group.frm-btnwrap
+						.frm-btn
+							input(type="submit", value="Submit")
+			.col(class="lg:w-1/2")
+				.img-src(class="img-ratio pt-[calc(440/640*100%)]")
+					+PugImg()
+
+section.product-other.section-medium
+	.container 
+		h2(class="text-blue-500 global-text-48 font-light mb-6") Other Products
+		.product-other-swiper.relative
+			.swiper
+				.swiper-wrapper
+					-for(i=0;i<4;i++)
+						.swiper-slide
+							+ProductItem()
+			.wrap-navigation-slide.progressbar-style-2(class="xl:hidden")
+				.swiper-pagination
+			.wrap-button-slide.slide-style-1
+				.btn-prev
+				.btn-next

@@ -1,0 +1,41 @@
+section.about-6.section-medium(class="bg-[#F1F6FD] relative")
+	.container(class="relative z-20")
+		h2(class="text-blue-500 global-text-48 font-light text-center mb-8") The Board of Directors
+		.box-main 
+			.item(class="max-w-[calc(376/1920*100rem)] mx-auto")
+				.box-img 
+					.img-src(class="img-ratio pt-[calc(456/376*100%)]")
+						+PugImg()
+				.box-content
+					h3 Ông Nguyễn Văn Đạo
+					ul 
+						li Chủ tịch Hội Đồng Quản Trị
+						li Tổng Giám Đốc
+		.about-6-swiper.relative.mt-10
+			.swiper
+				.swiper-wrapper
+					.swiper-slide
+						.item 
+							.box-img 
+								.img-src(class="img-ratio pt-[calc(370/304*100%)]")
+									+PugImg()
+							.box-content
+								h3 Ông Nguyễn Anh Nhân
+								ul 
+									li Trợ lý Tổng Giám Đốc
+					-for(i=0;i<7;i++)
+						.swiper-slide
+							.item 
+								.box-img 
+									.img-src(class="img-ratio pt-[calc(370/304*100%)]")
+										+PugImg()
+								.box-content
+									h3 Ông Lê Sơn Tùng
+									ul 
+										li Phó Tổng Giám Đốc
+										li Thành viên Hội Đồng Quản Trị
+			.wrap-navigation-slide.progressbar-style-2(class="xl:hidden")
+				.swiper-pagination
+			.wrap-button-slide.slide-style-1
+				.btn-prev
+				.btn-next

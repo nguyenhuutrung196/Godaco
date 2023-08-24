@@ -1,0 +1,32 @@
+.home-3
+	.desc
+		@apply text-black
+	.box-img
+		&>img
+			@apply object-contain #{!important}
+		@media(max-width: 1023.98px)
+			@apply pt-[80%]
+	.btn-wrap
+		@apply my-5
+	&-swiper
+		img
+			@apply rounded-[calc(16/1920*100rem)]
+		.count-index
+			@apply flex gap-20
+			span
+				@apply global-text-24 font-medium
+				&.number-index
+					@apply text-red-500 
+				&.total-index
+					@apply text-blue-500 relative
+					&::before
+						content: ''
+						right: rr(25px)
+						width: rr(49px)
+						height: rr(1px)
+						@apply bg-blue-200
+						@apply absolute top-1/2 -translate-y-1/2
+	@media(max-width: 1023.98px)
+		.row
+			.col+.col
+				@apply mt-7.5

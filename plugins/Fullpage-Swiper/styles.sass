@@ -1,0 +1,170 @@
+// Animations Fullpage
+// -------------------
+body.animation-effect.homepage
+	header
+		animation: 1s fadeInDown 1.2s ease-in-out both
+		@media (max-width: 1023.98px)
+			animation-delay: 0s
+	.fullpage-slide-thumb
+		animation: 1s ani-fullpage-slide-thumb 1.4s ease-in-out backwards
+	.tools-fixed
+		animation: 1s ani-tool-fixed 1.4s ease-in-out backwards
+		@media (max-width: 1023.98px)
+			animation-delay: 0s
+@keyframes ani-fullpage-slide-thumb
+	0%
+		opacity: 0
+		transform: translate(100px,-50%)
+	100%
+		opacity: 1
+		transform: translate(0,-50%)
+@keyframes ani-tool-fixed
+	0%
+		opacity: 0
+		transform: translate(-100px,-30%)
+	100%
+		opacity: 1
+		transform: translate(0,-30%)
+
+body.animation-effect .swiper-full-current
+	@screen xl
+		&>.swiper-wrapper
+			&>.swiper-slide
+				&.swiper-slide-active
+					.ani-scale
+						animation: scaleSmall 1s .8s both ease-in-out
+					.ani-scaleRotate
+						animation: scaleRotate 1.4s .3s both ease-in-out
+					.ani-scaleUp
+						will-change: transform, opacity
+						animation: scaleUp 1s .8s both ease-in-out
+					.ani-scaleRight
+						will-change: transform, opacity
+						animation: scaleRight 1s .8s both ease-in-out
+					.ani-fadeInUp
+						will-change: transform, opacity
+						animation: fadeInUp 1s .8s both ease-in-out
+					.ani-fadeInDown
+						will-change: transform, opacity
+						animation: fadeInDown 1s .8s both ease-in-out
+					.ani-fadeInLeft
+						will-change: transform, opacity
+						animation: fadeInLeft 1s .8s both ease-in-out
+					.ani-fadeInRight
+						will-change: transform, opacity
+						animation: fadeInRight 1s .8s both ease-in-out
+					.ani-scaleLarge
+						animation: scaleLarge 1.6s .8s both ease-in-out
+					.ani-scaleLargeNoOpacity
+						animation: scaleLargeNoOpacity 1.6s .8s both ease-in-out
+					.ani-ballons
+						animation: scaleballons 1.5s .8s both ease-in-out
+					.ani-duration-15s
+						animation-duration: 1.5s
+					.ani-delay-0s
+						animation-delay: 0s
+					.ani-delay-1s
+						animation-delay: 1s
+					.ani-delay-13s
+						animation-delay: 1.3s
+					.ani-delay-12s
+						animation-delay: 1.2s
+					.ani-delay-14s
+						animation-delay: 1.4s
+					.ani-delay-16s
+						animation-delay: 1.6s
+					.ani-delay-18s
+						animation-delay: 1.6s
+					.ani-delay-19s
+						animation-delay: 1.9s
+					.ani-delay-20s
+						animation-delay: 2s
+					.ani-delay-22s
+						animation-delay: 2.2s
+					.ani-delay-165s
+						animation-delay: 1.65s
+@keyframes scaleSmall
+	0%
+		transform: translate3d(0,100px,0) scale(.8)
+		@apply opacity-0
+	100%
+			transform: none
+		@apply opacity-100
+@keyframes fadeInUp
+	0%
+		opacity: 0
+		transform: translate3d(0,200px,0)
+	100%
+		transform: none
+		opacity: 1
+@keyframes fadeIn
+	0%
+		filter: blur(10px)
+		opacity: 0
+	100%
+		filter: blur(0)
+		opacity: 1
+@keyframes fadeInDown
+	0%
+		opacity: 0
+		transform: translate(0,-200px)
+	100%
+		transform: none
+		opacity: 1
+@keyframes fadeInLeft
+	0%
+		opacity: 0
+		transform: translate(-200px,0)
+	100%
+		transform: none
+		opacity: 1
+@keyframes fadeInRight
+	0%
+		opacity: 0
+		transform: translate(200px,0)
+	100%
+		transform: none
+		opacity: 1
+@keyframes scaleLarge
+	0%
+		opacity: 0
+		transform: scale(1.15)
+	100%
+		opacity: 1
+		transform: none
+@keyframes scaleLargeNoOpacity
+	0%
+		transform: scale(1.15)
+	100%
+		transform: none
+@keyframes scaleUp
+	0%
+		opacity: 0
+		transform: translateY(-100px) scale(.6)
+	100%
+		opacity: 1
+		transform: none
+@keyframes scaleRight
+	0%
+		opacity: 0
+		transform: scale(.85) translateX(200px)
+	100%
+		opacity: 1
+		transform: none
+@keyframes scaleRotate
+	0%
+		opacity: 0
+		transform: scale(1.35) rotate(5deg)
+	100%
+		opacity: 1
+		transform: none
+@keyframes scaleballons
+	0%
+		transform: scale(0)
+		opacity: 0
+	100%
+		transform: none
+		opacity: 1
+@keyframes aniShadow
+	100%
+		box-shadow: 0px 0px 15px rgba(#E8AF2A, .5)

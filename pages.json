@@ -1,0 +1,93 @@
+{
+  "all": true,
+  "pages": [
+    {
+      "enabled": false,
+      "src": "index.pug"
+    },
+    {
+      "enabled": false,
+      "src": "about.pug"
+    },
+    {
+      "enabled": false,
+      "src": "contact.pug"
+    },
+    {
+      "enabled": false,
+      "src": "Contact.pug"
+    },
+    {
+      "enabled": false,
+      "src": "Home.pug"
+    },
+    {
+      "enabled": false,
+      "src": "NewsDetail.pug"
+    },
+    {
+      "enabled": false,
+      "src": "NewsList.pug"
+    },
+    {
+      "enabled": false,
+      "src": "About-Org.pug"
+    },
+    {
+      "enabled": false,
+      "src": "About.pug"
+    },
+    {
+      "enabled": false,
+      "src": "Field-ActivityDetail.pug"
+    },
+    {
+      "enabled": false,
+      "src": "Field-ActivityList.pug"
+    },
+    {
+      "enabled": true,
+      "src": "document.pug"
+    },
+    {
+      "enabled": true,
+      "src": "video.pug"
+    },
+    {
+      "enabled": false,
+      "src": "policy.pug"
+    },
+    {
+      "enabled": false,
+      "src": "provider.pug"
+    },
+    {
+      "enabled": true,
+      "src": "develop.pug"
+    },
+    {
+      "enabled": true,
+      "src": "InformationDisclosure.pug"
+    },
+    {
+      "enabled": false,
+      "src": "RecruitmentDetail.pug"
+    },
+    {
+      "enabled": false,
+      "src": "RecruitmentList.pug"
+    },
+    {
+      "enabled": false,
+      "src": "LibraryBrand.pug"
+    },
+    {
+      "enabled": false,
+      "src": "LibraryVideo.pug"
+    },
+    {
+      "enabled": false,
+      "src": "LibraryImage.pug"
+    }
+  ]
+}

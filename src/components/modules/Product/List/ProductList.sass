@@ -1,0 +1,53 @@
+.product-list
+	.box-top
+		.desc
+			@apply global-text-20 text-[#151515] my-8
+		.item
+			&:hover
+				.content
+					h2
+						@apply text-red-500
+						&::after
+							@apply opacity-100
+		.box-img
+			border-radius: rr(4px)
+			background: rgba(204, 204, 204, 0.50)
+			padding: rr(5px) rr(15px)
+			@apply text-center
+		.content
+			@apply mt-5 text-center
+			h2
+				@apply font-normal global-text-24 text-base font-medium flex flex-col gap-1
+				@apply transition-all duration-300
+				&::after
+					content: '\f0d7'
+					@apply font-black text-2xl leading-1.33333 font-awesome text-red-500
+					@apply transition-all duration-300 opacity-0
+	.box-bottom
+		&::before
+			content: ''
+			background-image: url("../img/product/list/2.svg")
+			background-position: center
+			background-repeat: no-repeat
+			background-size: cover
+			@apply absolute top-0 left-0 w-full z-10 h-[calc(1151/1920*100rem)]
+		ul
+			@apply flex items-center justify-center gap-5 my-5
+			a
+				@apply bg-transparent border-blue-200 border rounded-1 text-blue-500 global-text-20
+				@apply inline-flex items-center justify-center py-2 px-2.5
+				@apply transition-all duration-300
+				&:hover, &.active
+					@apply bg-red-500 text-white border-red-500
+		.desc
+			@apply global-text-20 text-[#151515] mb-5
+
+.item-product
+	&:hover
+		h3
+			@apply text-red-500
+	.box-content 
+		@apply mt-3.75
+	h3
+		@apply global-text-24 text-black font-medium
+		@apply transition-all duration-300

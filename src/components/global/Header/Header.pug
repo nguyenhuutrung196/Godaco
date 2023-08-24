@@ -1,0 +1,96 @@
+header
+	.header-wrapper
+		.header-hambuger.cursor-pointer
+			span
+			span
+			span
+		.header-logo
+			a(href="/" class="header-logo-desktop")
+				img(src="./img/logo_header.png" alt="logo")
+			a(href="/" class="header-logo-mobile")
+				img(src="./img/logo_header_active.png" alt="logo")
+		.header-content
+			nav.header-menu
+				ul.menu
+					li.active
+						a
+							span
+								em.fa-regular.fa-house
+					li
+						a
+							span ABOUT US
+					li
+						a
+							span WHAT WE DO
+					li.has-child
+						a PRODUCTS
+						em.fa-light.fa-chevron-down
+						.drop-down
+							.box-parent-category
+								ul
+									li.active
+										a(href="#")
+											span Seafood
+										.sub-menu-product
+											ul 
+												li 
+													a(href="#")
+														span Value-added
+												li 
+													a(href="#")
+														span Pangasius / Basa
+												li
+													a(href="#")
+														span Clams
+												li 
+													a(href="#")
+														span Octopus
+												li 
+													a(href="#")
+														span Eel
+									li 
+										a(href="#")
+											span Agriculture
+										.sub-menu-product
+											ul 
+												li 
+													a(href="#")
+														span Value-added
+												li 
+													a(href="#")
+														span Pangasius / Basa
+					li
+						a
+							span SUSTAINABILITY
+					li
+						a
+							span CAREER
+					li
+						a(href="#")
+							span NEWS
+			div(class="flex items-center")
+				.header-menu-search.flex-center
+					em.fa-light.fa-magnifying-glass.icon-search
+
+				.header-language
+					ul 
+						li.active
+							a(href="#") En
+						li
+							a(href="#") Vn
+						li
+							a(href="#") Ch
+						li
+							a(href="#") Jp
+						li
+							a(href="#") Kr
+
+.header-menu-mobile
+.header-search-form
+	.close.flex.items-center.justify-center.absolute.top-0.bg-white.text-3xl.cursor-pointer(class="w-[calc(50/1920*100rem)] h-[calc(50/1920*100rem)] px-5 hover: hover:text-white transition-all duration-300")
+		i.fa-light.fa-xmark
+	.container
+		.wrap-form-search-product
+			.productsearchbox
+				input(type="text" placeholder="Bộ ghế sofa 2022")
+				button

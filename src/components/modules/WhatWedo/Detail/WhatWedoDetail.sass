@@ -1,0 +1,61 @@
+.wwd-detail
+	.aquaculture
+		.desc
+			p
+				@apply global-text-24 text-black
+		&-swiper
+			@apply bg-[#F1F6FD] py-12 px-5 lg:px-30
+			.item
+				@apply text-center
+			h4
+				@apply global-text-40 text-red-500 font-bold
+			.desc
+				@apply global-text-20 text-black font-medium mt-2
+			@media(max-width: 767.98px)
+				@apply pb-10
+				.swiper-pagination
+					@apply bottom-2.5
+	.info
+		.item
+			&+.item
+				@apply mt-5
+			&:nth-child(odd)
+				.box-content
+					@apply bg-[#F1F6FD]
+					h3
+						@apply text-blue-500
+					.desc
+						@apply text-black
+			&:nth-child(even)
+				.box-content
+					@apply bg-blue-500 text-white
+			@screen lg
+				&:nth-child(odd)
+					.box-img
+						@apply order-2
+					.box-content
+						@apply order-1
+				&:nth-child(even)
+					.box-img
+						@apply order-1
+					.box-content
+						@apply order-2
+		.box-content, .box-img
+			flex: 0 0 100%
+			max-width: 100%
+			width: 100%
+			img
+				@apply rounded-1
+		.box-content
+			@apply rounded-1 flex items-center
+			h3
+				@apply global-text-36 font-medium
+			.desc
+				@apply global-text-20 mt-6
+		@screen lg
+			.box-img
+				flex: 0 0 calc(50% - rr(10px))
+				max-width: calc(50% - rr(10px))
+			.box-content
+				flex: 0 0 calc(50% - rr(10px))
+				max-width: calc(50% - rr(10px))

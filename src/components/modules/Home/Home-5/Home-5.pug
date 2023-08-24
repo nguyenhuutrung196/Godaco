@@ -1,0 +1,25 @@
+section.home-5(class="section-medium")
+	.container
+		h2(class="relative z-20 text-center global-text-48 font-light text-blue-500 mb-6") News
+		.home-5-swiper.relative
+			.swiper
+				.swiper-wrapper
+					-for(i=0;i<5;i++)
+						.swiper-slide
+							.item
+								.img-src
+									a(class="img-ratio pt-[calc(234/416*100%)] zoom-img")
+										+PugImg()
+								.content
+									time 31.03.2023
+									h3
+										a GODACO at Shanghai international seafood exhibition
+			.wrap-navigation-slide.progressbar-style-2(class="xl:hidden")
+				.swiper-pagination
+			.wrap-button-slide.slide-style-1
+				.btn-prev
+				.btn-next
+		.btn-wrap(class="flex-center mt-6")
+			a(href="#" class="btn btn-1")
+				span View all
+				em.fa-light.fa-arrow-right-long

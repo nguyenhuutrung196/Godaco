@@ -1,0 +1,17 @@
+.global-breadcrumb
+	@apply py-2 bg-background-F5
+	ol
+		@apply flex items-center
+	li
+		&:first-child
+			a
+				@apply text-0
+				&::before
+					content: '\f015'
+					@apply font-awesome leading-1.25 text-base 
+		&:not(:first-child)
+			&::before
+				content: '\f105'
+				@apply font-awesome text-[#777777] mx-2
+		a
+			@apply text-[#777777] text-lg leading-1.33333

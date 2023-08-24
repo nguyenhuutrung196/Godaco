@@ -1,0 +1,76 @@
+.product-detail
+	&.section-medium
+		@apply pb-0
+	.box-left
+		@apply flex justify-between
+	.desc
+		@apply global-text-20 text-black
+	.swiper-thumb
+		flex: 0 0 calc(102/864*100%)
+		max-width: calc(102/864*100%)
+		width: 100%
+		@apply py-14
+		.swiper-slide
+			height: calc((100% - rr(12px)) / 5) !important
+		.btn-prev
+			@apply absolute top-0 left-1/2 -translate-x-1/2
+			&::before
+				content: '\f077'
+				@apply text-blue-500 font-light text-40 leading-none
+		.btn-next
+			@apply absolute bottom-0 left-1/2 -translate-x-1/2
+			&::before
+				content: '\f078'
+				@apply text-blue-500 font-light text-40 leading-none
+	.swiper-main
+		flex: 0 0 calc(752/864*100%)
+		max-width: calc(752/864*100%)
+		width: 100%
+
+.product-info 
+	.tabslet-tab
+		@apply flex gap-5
+		li
+			&.active
+				a
+					@apply bg-red-500 border-red-500 text-white
+		a
+			@apply inline-flex items-center justify-center px-2.5 py-2 global-text-20 text-blue-500
+			@apply bg-transparent border border-blue-200 rounded-1
+			@apply transition-all duration-300
+			&:hover
+				@apply bg-red-500 border-red-500 text-white
+	.tabslet-content
+		@apply mt-5
+		h3
+			@apply text-blue-500 font-semibold global-text-24 mb-5
+		p
+			@apply global-text-20
+			&+p
+				@apply mt-2
+
+.product-form
+	.form-wrap
+		input:not([type="submit"]), textarea
+			@apply w-full resize-none rounded-1
+			&::placeholder
+				@apply text-body-text-66 text-lg leading-1.33333
+		input
+			&:not([type="submit"])
+				@apply px-5 py-3 text-body-text-66 text-lg leading-1.33333
+			&[type="submit"]
+				@apply text-0 #{!important}
+		textarea
+			@apply mt-5 h-[calc(112/1920*100rem)] pt-3 pl-5
+		.frm-btn
+			@apply bg-red-500 mt-5 inline-flex items-center gap-3 px-15 h-11 rounded-[calc(8/1920*100rem)]
+			&::before
+				content: 'Send'
+				@apply text-xl font-normal text-white leading-[28/20]
+			&::after
+				content: '\f178'
+				@apply font-awesome text-xl leading-none text-white font-light
+
+.product-other-swiper
+	@media(max-width: 1279.98px)
+		@apply pb-5

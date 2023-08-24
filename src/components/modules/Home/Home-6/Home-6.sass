@@ -1,0 +1,25 @@
+.home-6
+	&.section-large
+		@screen xl
+			@apply pb-[calc(200/1920*100rem)]
+	&::before
+		content: ''
+		background-image: url(../img/home/6.png)
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+		height: rr(160px)
+		@apply absolute -top-5 left-0 w-full -z-10
+	.desc
+		p
+			@apply global-text-20 text-black
+			&.high-light
+				@apply text-red-500 py-6
+	.img-src
+		@apply xl:scale-110
+		img
+			@apply w-full
+	@media(max-width: 1023.98px)
+		.row
+			.col+.col
+				@apply mt-7.5

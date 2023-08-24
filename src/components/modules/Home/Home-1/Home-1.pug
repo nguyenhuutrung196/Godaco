@@ -1,0 +1,24 @@
+section.home-1(class="section-large")
+	.container 
+		h2(class="relative z-20 text-center global-text-48 font-light text-blue-500") Featured Products
+		.btn-wrap(class="flex-center mt-8 gap-4 md:gap-8 flex-wrap")
+			a(href="#" class="btn btn-1")
+				span Discover More
+				em.fa-light.fa-arrow-right-long
+			a(href="#" class="btn btn-1")
+				span Contact Us
+				em.fa-light.fa-arrow-right-long
+		.home-1-swiper.relative
+			.swiper
+				.swiper-wrapper
+					-for(i=0;i<4;i++)
+						.swiper-slide
+							a(href="#" class="item")
+								.img-src(class="img-ratio zoom-img")
+									img(src="./img/home/1.png", alt="")
+								h3 Value-added
+			.wrap-navigation-slide.progressbar-style-2(class="xl:hidden")
+				.swiper-pagination
+			.wrap-button-slide.slide-style-1
+				.btn-prev
+				.btn-next

@@ -1,0 +1,33 @@
+.about-2
+	.swiper-thumb
+		&::before
+			content: ''
+			@apply absolute top-[28%] left-1/2 -translate-x-1/2
+			@apply bg-blue-100 w-full h-[calc(2/1920*100rem)]
+		.swiper-wrapper
+			@apply justify-center
+		.icon
+			@apply h-8 w-8 rounded-full border-blue-500 relative bg-white
+			@apply border cursor-pointer scale-[77%]
+			@apply transition-all duration-300
+			&::before
+				content: ''
+				@apply h-2 w-2 rounded-full bg-blue-500 scale-[60%]
+				@apply absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
+				@apply transition-all duration-300
+		.year
+			@apply global-text-20 font-medium text-blue-400
+		.swiper-slide-active
+			.icon
+				@apply scale-100 border-red-500
+				&::before
+					@apply scale-100 bg-red-500
+	.swiper-main
+		h3
+			@apply text-center text-red-500 global-text-32 font-semibold mt-5
+		.desc
+			p
+				@apply global-text-20 text-[#151515] text-center
+		.img-src
+			img
+				@apply rounded-1

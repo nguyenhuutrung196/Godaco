@@ -1,0 +1,38 @@
+.about-1
+	&.section-large
+		@screen xl
+			@apply pb-[calc(200/1920*100rem)]
+	.content
+		@apply pl-20 mt-6 relative
+		&::before,&::after
+			content: ''
+			background-size: cover
+			background-repeat: no-repeat
+			background-position: center
+			@apply absolute w-15 h-15
+		&::before
+			background-image: url("../img/about/1.png")
+			@apply top-0 left-0
+		&::after
+			background-image: url("../img/about/2.png")
+			@apply bottom-0 right-0
+	.desc
+		p
+			@apply relative pb-5 mb-5
+			&::after
+				content: ''
+				@apply bg-red-500 w-20 h-[calc(2/1920*100rem)]
+				@apply absolute left-0 bottom-0
+	.name
+		@apply global-text-24 font-semibold text-blue-500
+		span
+			@apply text-body-text-66 font-normal block mb-1
+	.img-src
+		img
+			mix-blend-mode: luminosity
+			@apply object-contain opacity-45 #{!important}
+	.avtar
+		&::after
+			content: ''
+			background: linear-gradient(180deg, rgba(255, 255, 255, 0.00) 0%, #FFF 100%)
+			@apply absolute bottom-0 left-0 w-full h-[calc(179/1920*100rem)]

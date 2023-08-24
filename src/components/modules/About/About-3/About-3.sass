@@ -1,0 +1,29 @@
+.about-3
+	.item
+		&+.item
+			@apply mt-5
+		&:nth-child(odd)
+			.box-img
+				@apply order-1
+			.box-content
+				@apply order-2
+		&:nth-child(even)
+			.box-img
+				@apply order-2
+			.box-content
+				@apply order-1
+	.box-img
+		flex: 0 0 calc(50% - rr(10px))
+		max-width: calc(50% - rr(10px))
+		width: 100%
+		img
+			@apply rounded-1
+	.box-content
+		flex: 0 0 calc(50% - rr(10px))
+		max-width: calc(50% - rr(10px))
+		width: 100%
+		@apply bg-blue-500 rounded-1 flex items-center
+		h3
+			@apply global-text-48 font-light 
+		.desc
+			@apply global-text-20 mt-6
